@@ -7,10 +7,16 @@ app.use(cors()) // penggunaan cors agar end point dapat diakses oleh cross platf
 //import routes
 const praktikum = require('./routes/praktikumRoute')
 const soal1 = require('./routes/soal1Route')
+const soal2 = require('./routes/soal2Route')
+const soal3 = require('./routes/soal3Route')
+const soal4 = require('./routes/soal4Route')
 
 //implementasi routes
 app.use('/praktikum', praktikum)
 app.use('/soal1', soal1)
+app.use('/soal2', soal2)
+app.use('/soal3', soal3)
+app.use('/soal4', soal4)
 
 // endpoint "/test" dengan method GET 
 app.get("/test", (req,res) => {

@@ -1,7 +1,7 @@
 exports.kubus = (req,res) => {
     let sisi = Number(req.body.sisi)
-    let v = sisi*sisi*sisi
-    let lp = 6 * sisi*sisi
+    let v = Math.pow(sisi, 3)
+    let lp = 6 * Math.pow(sisi, 2)
     let response = {
         sisi: sisi,
         volume: v,
@@ -29,7 +29,7 @@ exports.balok = (req,res) => {
 exports.tabung = (req,res) => {
     let r = Number(req.body.rusuk)
     let t = Number(req.body.tinggi)
-    let v = Math.PI * r*r * t
+    let v = Math.PI * Math.pow(r, 2) * t
     let lp = 2 * Math.PI * r * (r + t)
     let response = {
         rusuk: r,
@@ -42,8 +42,8 @@ exports.tabung = (req,res) => {
 
 exports.bola = (req,res) => {
     let r = Number(req.body.rusuk)
-    let v = 4/3 * Math.PI * r*r*r
-    let lp = 4 * Math.PI * r*r 
+    let v = 4/3 * Math.PI * Math.pow(r, 3)
+    let lp = 4 * Math.PI * Math.pow(r, 2) 
     let response = {
         rusuk: r,
         volume: v,
